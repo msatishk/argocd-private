@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hello-app
   annotations:
-    ;onk.argocd.argoproj.io/external-link: https://hub.docker.com/repository/docker/msatishk$
+    link.argocd.argoproj.io/external-link: https://hub.docker.com/repository/docker/msatishk$
 spec:
   replicas: 1
   selector:
