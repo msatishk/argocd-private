@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: summer-trip-deployment
+  labels:
+    app: summer-trip
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: summer-trip
+  template:
+    metadata:
+      labels:
+        app: summer-trip
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: summer-trip
+        image: gcr.io/argocd-401112/summer-trip:v2
+        imagePullPolicy: Always
