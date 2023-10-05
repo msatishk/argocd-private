@@ -4,8 +4,6 @@ metadata:
   name: hello-deployment
   labels:
     app: hello-app
-  annotations:
-    link.argocd.argoproj.io/external-link: https://hub.docker.com/repository/docker/msatishk$
 spec:
   replicas: 1
   selector:
